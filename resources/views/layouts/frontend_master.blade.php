@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heal</title>
-    <link rel="shortcut icon" href="{{ asset('frontend') }}/assets/css/favicon.png" type="image/x-icon">
+    <title>Bagadana Youth Community</title>
+    <link rel="shortcut icon" href="{{ asset('frontend') }}/assets/images/logo/byc_logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/animate.css">
     <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/bootstrap.min.css">
@@ -15,8 +15,12 @@
     <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/lightcase.css">
     @stack('custom_css')
     <style>
+        
         .navbar-brand img{
             height: 55px;
+        }
+        .footer__logoarea img{
+            height: 40px;
         }
     </style>
 
@@ -53,40 +57,18 @@
                     <div class="menu">
                         <ul>
                             <li>
-                                <a href="#0" class="active">Home</a>
-                                <ul>
-                                    <li><a href="index.html">Home Page 1</a></li>
-                                    <li><a href="index-2.html" class="active">Home Page 2</a></li>
-                                    <li><a href="index-3.html">Home Page 3</a></li>
-                                </ul>
+                                <a href="{{ route('index') }}" class="active">Home</a>
                             </li>
                             <li>
                                 <a href="#0">Events</a>
-                                <ul>
-                                    <li><a href="event.html">Event</a></li>
-                                    <li><a href="event-grid.html">Event Grid View</a></li>
-                                    <li><a href="event-list.html">Event List View</a></li>
-                                    <li><a href="event-single.html">Event Details</a></li>
-                                    <li><a href="event-single2.html">Event Details 2</a></li>
-                                </ul>
                             </li>
                             <li>
-                                <a href="#0">Gallery</a>
-                                <ul>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="gallery-2.html">Gallery Style 2</a></li>
-                                    <li><a href="gallery-fluid.html">Gallery Style 3</a></li>
-                                    <li><a href="gallery-masonary.html">Gallery Style 4</a></li>
-                                </ul>
+                                <a href="#gallery">Gallery</a>
                             </li>
                             <li>
-                                <a href="#0">Blog</a>
-                                <ul>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-single.html">Blog Details</a></li>
-                                </ul>
+                                <a href="#blog">Blog</a>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                     </div>
                     <a href="{{ route('donate') }}" class="default-btn move-right"><span>Donate <i class="fas fa-heart"></i></span></a>
@@ -106,42 +88,31 @@
                 <div class="row g-4 justify-content-center">
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="footer__logoarea">
-                            <img src="{{ asset('frontend') }}/assets/images/logo/02.png" alt="footer-logo">
-                            <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora.</p>
-                            <p>Uniquely morph superior customer service whereas scalable.</p>
+                            <img src="{{ asset('frontend') }}/assets/images/logo/byc_logo.png" alt="footer-logo">
+                            <p>Bagadana Youth Community is a dynamic organization making a significant impact on Bangladesh. Their mission is to empower youth, promote environmental sustainability, and improve the lives of marginalized communities.
+                                </p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="footer__post footer-title">
-                            <h3>Recent Post</h3>
+                            <h3>Quick Links</h3>
                             <ul>
                                 <li>
-                                    <div class="footer__postthumb">
-                                        <a href="blog-single.html"><img src="{{ asset('frontend') }}/assets/images/footer/post/01.jpg" alt="footer-postthumb"></a>
-                                    </div>
                                     <div class="footer__postcontent">
-                                        <a href="blog-single.html"><h6>Nam nec tellus a odio.</h6></a>
-                                        <p><i class="far fa-clock"></i> Time: 02:00 pm</p>
+                                        <a href="{{ route('volunteer') }}"><h6>Volunteer</h6></a>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="footer__postthumb">
-                                        <a href="blog-single.html"><img src="{{ asset('frontend') }}/assets/images/footer/post/02.jpg" alt="footer-postthumb"></a>
-                                    </div>
                                     <div class="footer__postcontent">
-                                        <a href="blog-single.html"><h6>Uniquely impact focused.</h6></a>
-                                        <p><i class="far fa-clock"></i> Time: 02:00 pm</p>
+                                        <a href="{{ route('contact') }}"><h6>Contact</h6></a>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="footer__postthumb">
-                                        <a href="blog-single.html"><img src="{{ asset('frontend') }}/assets/images/footer/post/03.jpg" alt="footer-postthumb"></a>
-                                    </div>
                                     <div class="footer__postcontent">
-                                        <a href="blog-single.html"><h6>Nam nec tellus a odio.</h6></a>
-                                        <p><i class="far fa-clock"></i> Time: 02:00 pm</p>
+                                        <a href="{{ route('donate') }}"><h6>Donate</h6></a>
                                     </div>
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -151,47 +122,47 @@
                             <ul>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/01.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/01.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/01.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/1.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/02.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/02.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/02.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/2.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/03.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/03.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/03.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/3.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/04.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/04.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/04.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/4.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/05.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/05.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/05.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/5.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/06.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/06.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/06.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/6.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/07.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/07.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/07.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/7.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/08.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/08.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/08.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/8.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="footer__gallerythumb">
-                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/09.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/footer/gallery/09.jpg" alt="footer-gallerythumb"></a>
+                                        <a href="{{ asset('frontend') }}/assets/images/footer/gallery/09.jpg" data-rel="lightcase"><img src="{{ asset('frontend') }}/assets/images/gallery/home-2/9.jpg" alt="footer-gallerythumb"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -250,6 +221,8 @@
     <script src="{{ asset('frontend') }}/assets/js/jquery-3.6.0.min.js"></script>
     <!-- <script src="{{ asset('frontend') }}/assets/js/parallax.min.js"></script> -->
     <script src="{{ asset('frontend') }}/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="{{ asset('frontend') }}/assets/js/waypoints.min.js"></script>
     <script src="{{ asset('frontend') }}/assets/js/all.min.js"></script>
     <script src="{{ asset('frontend') }}/assets/js/swiper.min.js"></script>
@@ -260,5 +233,22 @@
     <script src="{{ asset('frontend') }}/assets/js/wow.js"></script>
     <script src="{{ asset('frontend') }}/assets/js/custom.js"></script>
     @stack('custom_js')
+
+
+@if (Session::has('success'))
+    
+<script>
+  Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "{{ Session::get('success') }}",
+  showConfirmButton: false,
+  timer: 3000
+});
+</script>
+  
+@endif
+
+
 </body>
 </html>

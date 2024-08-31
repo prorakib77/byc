@@ -82,6 +82,8 @@
 
 @endsection
 
+
+
 @push('custom_js')
 <script>
     $(document).ready(function() {

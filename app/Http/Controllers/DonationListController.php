@@ -34,13 +34,16 @@ class DonationListController extends Controller
 
         ]);
 
-        DonationList::create(
+        $donation_list = DonationList::create(
             [
                 'name' => $request->name,
                 'contact' => $request->contact,
                 'amount' => $request->custom_amount == null ? $request->amount : $request->custom_amount
             ]
         );
+
+        session(['donation_id' => $donation_list->id ]);
+        return redirect()->route('bkash-create-payment');
     }
 
     /**
